@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EDD2_JCSM_3104114.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Proyecto1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EDD31041114\Proyecto1.txt</Value>
+    </Setting>
+    <Setting Name="Indice" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EDD31041114\Indices.txt</Value>
+    </Setting>
+    <Setting Name="Disponible" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EDD31041114\Disponibles.txt</Value>
+    </Setting>
+    <Setting Name="Eliminado" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\EDD31041114\Elimiados.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

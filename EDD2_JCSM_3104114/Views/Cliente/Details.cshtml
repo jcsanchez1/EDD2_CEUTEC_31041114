@@ -1,0 +1,162 @@
+﻿@model EDD2_JCSM_3104114.Models.ClienteModels
+
+@{
+    ViewBag.Title = "Detalle del Cliente";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Detalle del Cliente</h2>
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Clientes", "Index")
+            </li>
+            <li class="active">
+                <strong>Detalle del Cliente</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Detalle del Cliente</h5>
+                </div>
+                <div class="ibox-content">
+
+
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ClienteNumCliente)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ClienteNumCliente)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ClienteIdentidad)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ClienteIdentidad)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ClienteNombre)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ClienteNombre)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ClienteApellido)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ClienteApellido)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ClienteFechaNacimiento)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ClienteFechaNacimiento)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ClientePais)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ClientePais)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ClienteDepartamento)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ClienteDepartamento)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ClienteMunicipio)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ClienteMunicipio)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ClienteDireccion)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ClienteDireccion)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ClienteTelefono)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ClienteTelefono)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.PinturaCodigo)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.PinturaCodigo)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.PinturaDescripcion)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.PinturaDescripcion)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.PinturaCantidad)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.PinturaCantidad)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.PinturaUnidadMedida)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.PinturaUnidadMedida)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.FechaCompra)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.FechaCompra)
+                        </dd>
+
+                    </dl>
+                    @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-white btn-xl" })
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,174 @@
+﻿@model EDD2_JCSM_3104114.Models.ClienteModels
+
+@{
+    ViewBag.Title = "Nuevo Cliente";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Nuevo Cliente</h2>
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Clientes", "Index")
+            </li>
+            <li class="active">
+                <strong>Nuevo Cliente</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-sm-8">
+        <div class="title-action">
+            @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-primary btn-xl" })
+        </div>
+    </div>
+</div>
+
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Nuevo Cliente</h5>
+                </div>
+                <div class="ibox-content">
+                    
+                    @if (ViewBag.MessageError != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade in" role="alert">
+                            @ViewBag.MessageError
+                        </div>
+                    }
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            @Html.ValidationSummary(true)
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ClienteNumCliente, new { @class = "control-label col-md-2" })
+                                <div class="col-md-4">
+                                    @Html.EditorFor(model => model.ClienteNumCliente)
+                                    @Html.ValidationMessageFor(model => model.ClienteNumCliente)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ClienteIdentidad, new { @class = "control-label col-md-2" })
+                                <div class="col-md-4">
+                                    @Html.EditorFor(model => model.ClienteIdentidad)
+                                    @Html.ValidationMessageFor(model => model.ClienteIdentidad)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ClienteNombre, new { @class = "control-label col-md-2" })
+                                <div class="col-md-4">
+                                    @Html.EditorFor(model => model.ClienteNombre)
+                                    @Html.ValidationMessageFor(model => model.ClienteNombre)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ClienteApellido, new { @class = "control-label col-md-2" })
+                                <div class="col-md-4">
+                                    @Html.EditorFor(model => model.ClienteApellido)
+                                    @Html.ValidationMessageFor(model => model.ClienteApellido)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ClienteFechaNacimiento, new { @class = "control-label col-md-2" })
+                                <div class="col-md-4">
+                                    @Html.EditorFor(model => model.ClienteFechaNacimiento)
+                                    @Html.ValidationMessageFor(model => model.ClienteFechaNacimiento)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ClientePais, new { @class = "control-label col-md-2" })
+                                <div class="col-md-4">
+                                    @Html.DropDownListFor(model => model.ClientePais, (SelectList)ViewBag.Pais, string.Empty, new
+                                    {
+                                        data_placeholder = "Seleccione un Pais..",
+                                        @class = "chosen-select"
+                                    })
+                                    @Html.ValidationMessageFor(model => model.ClientePais)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ClienteDepartamento, new { @class = "control-label col-md-2" })
+                                <div class="col-md-4">
+                                    @Html.DropDownListFor(model => model.ClienteDepartamento, (SelectList)ViewBag.Departamentos, string.Empty, new
+                                    {
+                                        data_placeholder = "Seleccione un Departamento..",
+                                        @class = "chosen-select"
+                                    })
+                                    @Html.ValidationMessageFor(model => model.ClienteDepartamento)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ClienteMunicipio, new { @class = "control-label col-md-2" })
+                                <div class="col-md-4">
+                                    @Html.DropDownListFor(model => model.ClienteMunicipio, (SelectList)ViewBag.Ciudades, string.Empty, new
+                                    {
+                                        data_placeholder = "Seleccione un Municipio..",
+                                        @class = "chosen-select"
+                                    })
+                                    @Html.ValidationMessageFor(model => model.ClienteMunicipio)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ClienteDireccion, new { @class = "control-label col-md-2" })
+                                <div class="col-md-4">
+                                    @Html.EditorFor(model => model.ClienteDireccion)
+                                    @Html.ValidationMessageFor(model => model.ClienteDireccion)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.ClienteTelefono, new { @class = "control-label col-md-2" })
+                                <div class="col-md-4">
+                                    @Html.EditorFor(model => model.ClienteTelefono)
+                                    @Html.ValidationMessageFor(model => model.ClienteTelefono)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.PinturaCodigo, new { @class = "control-label col-md-2" })
+                                <div class="col-md-4">
+                                    @Html.DropDownListFor(model => model.PinturaCodigo, (SelectList)ViewBag.Pinturas, string.Empty, new
+                                    {
+                                        data_placeholder = "Seleccione un Servicio..",
+                                        @class = "chosen-select"
+                                    })
+                                    @Html.ValidationMessageFor(model => model.PinturaCodigo)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Guardar" class="btn btn-primary btn-xl" />
+                                    @Html.ActionLink("Cancelar", "Index", null, new { @class = "btn btn-white btn-xl" })
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

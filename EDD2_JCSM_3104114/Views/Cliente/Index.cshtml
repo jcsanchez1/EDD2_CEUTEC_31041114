@@ -1,0 +1,116 @@
+﻿@model IEnumerable<EDD2_JCSM_3104114.Models.ClienteModels>
+
+@{
+    ViewBag.Title = "Clientes";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Clientes</h2>
+        <ol class="breadcrumb">
+            <li class="active">
+                <strong>Clientes</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Lista de Clientes</h5>
+                    <div class="ibox-tools">
+                        <label>Total Registros:</label>  <span> @ViewBag.cantidad </span>
+                        @Html.ActionLink("Nuevo Cliente", "Crear", null, new { @class = "btn btn-primary btn-xl" })
+                        @Html.ActionLink("Indices", "IndexFile", null, new { @class = "btn btn-default btn-xl" })
+                        @Html.ActionLink("Disponibles", "AvailableFile", null, new { @class = "btn btn-default btn-xl" })
+                        @Html.ActionLink("Eliminados", "deletedFile", null, new { @class = "btn btn-default btn-xl" })
+                        @Html.ActionLink("Compatar", "ReBuild", null, new { @class = "btn btn-default btn-xl" })
+                    </div>
+                </div>
+                <div class="ibox-content ibox-overflow">
+
+                    <table class="table table-striped table-bordered table-hover dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ClienteNumCliente)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ClienteNombre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ClienteApellido)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ClienteTelefono)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PinturaCodigo)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PinturaDescripcion)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PinturaCantidad)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PinturaUnidadMedida)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FechaCompra)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClienteNumCliente)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClienteNombre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClienteApellido)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ClienteTelefono)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PinturaCodigo)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PinturaDescripcion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PinturaCantidad)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PinturaUnidadMedida)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FechaCompra)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Detalle", "Details", new { id = item.Id }, new { @class = "btn btn-primary btn-xl" })
+                                        @Html.ActionLink("Borrar", "Delete", new { id = item.Id }, new { @class = "btn btn-white btn-xl" })
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

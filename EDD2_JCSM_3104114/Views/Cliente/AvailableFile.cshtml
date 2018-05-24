@@ -1,0 +1,71 @@
+﻿@model IEnumerable<EDD2_JCSM_3104114.Models.DisponiblesModels>
+
+@{
+    ViewBag.Title = "Disponibles";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>Disponibles</h2>
+        <ol class="breadcrumb">
+            <li class="active">
+                <strong>Disponibles</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-sm-8">
+        <label>Total Registros:</label>  <span> @ViewBag.cantidad </span>
+        <div class="title-action">
+            @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-primary btn-xl" })
+        </div>
+    </div>
+</div>
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Lista de Disponibles</h5>
+                </div>
+                <div class="ibox-content">
+
+                    <table class="table table-striped">
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ClienteNumCliente)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.TipoPintura)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Estado)
+                            </th>
+                        </tr>
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ClienteNumCliente)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.TipoPintura)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Estado)
+                                </td>
+                            </tr>
+                        }
+
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

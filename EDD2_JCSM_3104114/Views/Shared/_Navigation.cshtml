@@ -1,0 +1,31 @@
+﻿@using EDD2_JCSM_3104114.Helpers
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <strong class="font-bold">Invitado</strong>
+                            </span> <span class="text-muted text-xs block">invitado@sic.com <b class="caret"></b></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    SIC+
+                </div>
+            </li>
+            <li class="@Html.IsSelected(controller: "Home") nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "Home")"><i class="fa fa-home"></i>inicio</a>
+            </li>
+            <li class="@Html.IsSelected(controller:"Clientes") nav-item ">
+                <a class="nav-link" href="@Url.Action("Index", "Clientes")"><i class="fa fa-desktop"></i>Clientes</a>
+            </li>
+            <!-- <li>@Html.ActionLink("Clientes","Index","Cliente")</li>-->
+        </ul>
+    </div>
+</nav>
